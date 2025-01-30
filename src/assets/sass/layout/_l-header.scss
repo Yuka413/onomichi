@@ -1,0 +1,158 @@
+@use "../global/" as global;
+
+.l-header {
+  z-index: 100;
+  position: fixed;
+  width: 100%;
+  padding-top: 17px;
+  padding-bottom: 15px;
+  background: #fff;
+
+  @include global.mq("md") {
+    padding-top: 14px;
+    padding-bottom: 13px;
+  }
+}
+
+.l-header__inner {
+}
+
+.l-header__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.l-header__logo {
+  img {
+    width: 210px;
+    height: 27px;
+    flex-shrink: 0;
+
+    @include global.mq("md") {
+      width: 183px;
+      height: 24px;
+      flex-shrink: 0;
+    }
+  }
+}
+
+.l-header__open {
+  height: 32px;
+  width: 32px;
+  position: relative;
+  @include global.mq("md") {
+    display: none;
+  }
+}
+
+.l-header__open-bar {
+  transition: all 0.3s ease;
+  position: absolute;
+  background: #4a3636;
+  height: 3px;
+  border-radius: 1.5px;
+
+  &:nth-of-type(1) {
+    width: 25.6px;
+    top: 1px;
+    left: 0;
+  }
+  &:nth-of-type(2) {
+    width: 4.8px;
+    top: 1px;
+    right: 0;
+  }
+  &:nth-of-type(3) {
+    opacity: 1;
+    width: 32px;
+    top: 13px;
+    left: 0;
+  }
+  &:nth-of-type(4) {
+    width: 32px;
+    top: 25px;
+    left: 0;
+  }
+}
+
+.l-header__open-bar {
+  &.is-active {
+    &:nth-of-type(1) {
+      transform: rotate(45deg);
+      top: 9px;
+    }
+    &:nth-of-type(2) {
+      transform: rotate(45deg);
+      top: 21px;
+      left: 23px;
+    }
+    &:nth-of-type(3) {
+      opacity: 0;
+    }
+    &:nth-of-type(4) {
+      transform: rotate(-45deg);
+      top: 12px;
+    }
+  }
+}
+
+.l-header__drawer {
+  top: 64px;
+  left: 0;
+  padding-top: 82px;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  transform: translateY(calc(-100% - 64px));
+  transition: transform 0.4s linear;
+  z-index: 50;
+
+  &.is-checked {
+    transform: translateY(0);
+  }
+}
+
+.l-header__drawer-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.l-header__drawer-link {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.l-header__drawer-button {
+  padding: 6px 24px 8px 24px;
+  border-radius: 40px;
+  border: 2px solid var(--LP-Blown, #4a3636);
+  background: var(--LP-White, #fff);
+  box-shadow: 0px 4px 0px 0px #4a3636;
+  a {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.6;
+  }
+}
+
+.l-header__pc-menu {
+  display: none;
+  @include global.mq("md") {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    align-items: center;
+  }
+}
+
+.l-header__pc-link {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.6;
+}

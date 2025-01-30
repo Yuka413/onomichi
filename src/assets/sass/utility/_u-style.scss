@@ -1,0 +1,21 @@
+@use "../global/" as global;
+
+.u-inner {
+  padding-inline: 20px;
+  @include global.mq("md") {
+    padding-inline: 24px;
+  }
+}
+
+.u-header__button {
+  @include global.mq("md") {
+    height: 36px;
+    display: flex;
+    align-items: center;
+    padding: 6px 24px 8px 21px;
+  }
+  margin-left: 4px;
+  a {
+    font-size: 14px;
+  }
+}

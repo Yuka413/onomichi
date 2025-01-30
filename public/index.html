@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name = "robots" content="noindex">
-    <meta name ="description" content = "あなたの見つけたレトロな尾道の一枚をInstagramに投稿しよう">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <meta
+      name="description"
+      content="あなたの見つけたレトロな尾道の一枚をInstagramに投稿しよう"
+    />
     <title>Snap Onomichi</title>
 
     <!-- meta -->
@@ -13,8 +16,105 @@
     <meta property="og:image" content="./assets/img/img_mv.png" />
     <meta property="og:site_name" content="TF Garden Salad." />
     <meta property="og:description" content="表参道にあるサラダカフェです。" />
-</head>
-<body>
-    
-</body>
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Courgette&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kiwi+Maru&family=Noto+Sans+JP:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- css -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <!-- headerここから -->
+    <header class="l-header">
+      <div class="l-header__inner u-inner">
+        <div class="l-header__container">
+          <h1 class="l-header__logo">
+            <img src="./assets/img/logo.png" alt="snap-onomichi" />
+          </h1>
+          <button class="l-header__open">
+            <span class="l-header__open-bar"></span>
+            <span class="l-header__open-bar"></span>
+            <span class="l-header__open-bar"></span>
+            <span class="l-header__open-bar"></span>
+          </button>
+          <nav class="l-header__pc-menu">
+            <a href="" class="l-header__pc-link">キャンペーンについて</a>
+            <a href="" class="l-header__pc-link">特典</a>
+            <a href="" class="l-header__pc-link">おすすめスポット</a>
+            <a href="" class="l-header__pc-link">よくある質問</a>
+            <a href="" class="l-header__pc-link">参加要項</a>
+            <button class="c-button u-header__button">
+              <a href="">応募してみる</a>
+            </button>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <div class="l-header__drawer">
+      <nav class="l-header__drawer-menu">
+        <a href="" class="l-header__drawer-link">キャンペーンについて</a>
+        <a href="" class="l-header__drawer-link">キャンペーン特典</a>
+        <a href="" class="l-header__drawer-link">おすすめスポット</a>
+        <a href="" class="l-header__drawer-link">よくある質問</a>
+        <a href="" class="l-header__drawer-link">参加要項</a>
+        <a href="" class="l-header__drawer-link">お問い合わせ</a>
+        <button class="c-button">
+          <a href="">応募してみる</a>
+        </button>
+      </nav>
+    </div>
+    <!-- headerここまで -->
+
+    <!-- mvここから -->
+    <div class="p-mv">
+      <div class="p-mv__inner">
+        <p class="p-mv__text-sub">
+          あなたの見つけたレトロな尾道の一枚を<br />
+          Instagramに投稿しよう
+        </p>
+        <div class="p-mv__text-main">
+          <div class="p-mv__text-main-first">
+            <img src="./assets/img/title1.png" alt="#見つけて尾道レトロ" />
+          </div>
+          <div class="p-mv__text-main-second">
+            <img src="./assets/img/title2.png" alt="キャンペーン！" />
+          </div>
+        </div>
+        <div class="p-mv__body">
+          <div class="p-mv__body-iphone">
+            <picture>
+              <source
+                media="(min-width:768px)"
+                srcset="./assets/img/device=pc.png"
+              />
+              <img src="./assets/img/device=SP.png" alt="iphone" />
+            </picture>
+            <div class="p-mv__body-fukidashi">
+              <img src="./assets/img/fukidashi.png" alt="" />
+            </div>
+            <div class="p-mv__body-present">
+              <img src="./assets/img/present.png" alt="" />
+            </div>
+            <div class="p-mv__body-food">
+              <img src="./assets/img/food.png" alt="" />
+            </div>
+            <div class="p-mv__body-catBlack">
+              <img src="./assets/img/cats=black.png" alt="" />
+            </div>
+            <div class="p-mv__body-catBrown">
+              <img src="./assets/img/cats=brown.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- mvここまで -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+  </body>
 </html>
