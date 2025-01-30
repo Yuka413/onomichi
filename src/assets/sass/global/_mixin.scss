@@ -1,0 +1,9 @@
+@use "sass:map";
+@use "./variables" as global;
+
+// メディアクエリ
+@mixin mq($breakpoint: md) {
+  @media #{map.get(global.$breakpoints, $breakpoint)} {
+    @content;
+  }
+}
