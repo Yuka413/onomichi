@@ -9,14 +9,33 @@
 .p-mv__inner {
   min-height: 554px;
   position: relative;
-  background: url(../img/mv-sp.png) no-repeat center bottom / cover;
-  @include global.mq("md") {
-    background: url(../img/mv-pc.png) no-repeat center center / cover;
-    min-height: 740px;
+}
+
+.p-mv__bg {
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  img {
+    border-radius: 0px 0px 24px 24px;
+    height: 554px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center center;
+
+    @include global.mq("md"){
+      height: 740px;
+    }
   }
 }
 
 .p-mv__text-sub {
+  position: absolute;
+  z-index: 50;
+  top: 0;
+  left: 50%;
+  width: 100%;
+  transform: translateX(-50%);
   padding-top: 18px;
   padding-bottom: 20px;
   color: var(--LP-Blown, #4a3636);
@@ -36,12 +55,22 @@
 }
 
 .p-mv__text-main {
+  position: absolute;
+  top: 73px;
+  z-index: 50;
   text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  @include global.mq("md") {
+    top: 118px;
+  }
 }
 
 .p-mv__text-main-first {
   img {
     width: 335px;
+
     @include global.mq("md") {
       width: 520px;
       height: 82px;
@@ -51,7 +80,6 @@
 
 .p-mv__text-main-second {
   padding-top: 12px;
-  padding-right: 2px;
   img {
     width: 240px;
     @include global.mq("md") {
@@ -61,15 +89,16 @@
   }
   @include global.mq("md") {
     padding-top: 16px;
-    padding-right: 0;
   }
 }
 
 .p-mv__body {
   position: absolute;
+  z-index: 50;
   left: 50%;
   transform: translateX(-50%);
   bottom: -145px;
+
   @include global.mq("md") {
     bottom: -79px;
   }
@@ -98,13 +127,13 @@
   top: -96px;
   img {
     width: 142px;
-    height: 80px;
-    flex-shrink: 0;
+
     @include global.mq("md") {
       width: 244px;
       height: 130px;
     }
   }
+
   @include global.mq("md") {
     left: -262px;
     top: -33px;
@@ -120,11 +149,13 @@
     width: 110px;
     height: 110px;
     flex-shrink: 0;
+
     @include global.mq("md") {
       width: 180px;
       height: 180px;
     }
   }
+
   @include global.mq("md") {
     right: -172px;
     top: -16px;
@@ -147,6 +178,9 @@
   }
   @include global.mq("md") {
     bottom: -16px;
+    left: -240px;
+  }
+  @include global.mq("lg") {
     left: -299px;
   }
 }
@@ -186,6 +220,9 @@
   }
   @include global.mq("md") {
     bottom: -61px;
+    right: -250px;
+  }
+  @include global.mq("lg") {
     right: -299px;
   }
 }

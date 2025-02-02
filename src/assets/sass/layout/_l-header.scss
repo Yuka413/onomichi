@@ -4,8 +4,8 @@
   z-index: 100;
   position: fixed;
   width: 100%;
-  padding-top: 17px;
-  padding-bottom: 15px;
+  padding-top: 16px;
+  padding-bottom: 16px;
   background: #fff;
 
   @include global.mq("md") {
@@ -56,23 +56,23 @@
 
   &:nth-of-type(1) {
     width: 25.6px;
-    top: 1px;
+    top: 2px;
     left: 0;
   }
   &:nth-of-type(2) {
     width: 4.8px;
-    top: 1px;
+    top: 2px;
     right: 0;
   }
   &:nth-of-type(3) {
     opacity: 1;
     width: 32px;
-    top: 13px;
+    top: 14px;
     left: 0;
   }
   &:nth-of-type(4) {
     width: 32px;
-    top: 25px;
+    top: 26px;
     left: 0;
   }
 }
