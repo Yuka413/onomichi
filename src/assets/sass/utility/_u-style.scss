@@ -19,3 +19,16 @@
     font-size: 14px;
   }
 }
+
+.u-sp__hidden{
+  display: none;
+  @include global.mq("md"){
+    display: inline-block;
+  }
+}
+
+.u-pc__hidden{
+  @include global.mq("md"){
+    display: none;
+  }
+}
