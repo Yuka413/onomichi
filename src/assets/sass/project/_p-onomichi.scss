@@ -1,0 +1,70 @@
+@use "../global/" as global;
+
+.p-onomichi {
+  padding-top: 36px;
+  background-color: global.$bg-color;
+  @include global.mq("md") {
+    padding-top: 64px;
+  }
+}
+
+.p-onomichi__inner {
+  position: relative;
+}
+
+.p-onomichi__bg {
+  z-index: 1;
+  position: absolute;
+  top: -136px;
+  left: 0;
+  img {
+    width: 138px;
+    flex-shrink: 0;
+    @include global.mq("md") {
+      width: 427px;
+    }
+  }
+  @include global.mq("md") {
+    left: -103px;
+    top: -674px;
+  }
+}
+
+.p-onomichi__title {
+  transform: translateY(2px);
+  position: relative;
+  text-align: center;
+  z-index: 10;
+  padding-inline: 9px;
+  img {
+    width: 100%;
+    max-width: 890px;
+  }
+  @include global.mq("md") {
+    transform: translateY(4px);
+  }
+}
+
+.p-onomichi__slider {
+  position: relative;
+  z-index: 15;
+  img {
+    width: 100px;
+    flex-shrink: 0;
+    @include global.mq("md") {
+      width: 200px;
+    }
+  }
+}
+
+.p-onomichi__swiper {
+  .swiper-wrapper {
+    transition-timing-function: linear !important;
+  }
+}
+
+.p-onomichi__swiper {
+  .swiper-slide {
+    width: auto;
+  }
+}

@@ -13,22 +13,29 @@
     display: flex;
     align-items: center;
     padding: 6px 24px 8px 21px;
-  }
-  margin-left: 4px;
-  a {
     font-size: 14px;
   }
+  margin-left: 4px;
 }
 
-.u-sp__hidden{
+.u-sp__hidden {
   display: none;
-  @include global.mq("md"){
+  @include global.mq("md") {
     display: inline-block;
   }
 }
 
-.u-pc__hidden{
-  @include global.mq("md"){
+.u-pc__hidden {
+  @include global.mq("md") {
     display: none;
   }
+}
+
+.u-under-line {
+  text-decoration-line: underline;
+  text-underline-offset: 2px;
+}
+
+.u-bold{
+  font-weight: 700;
 }
