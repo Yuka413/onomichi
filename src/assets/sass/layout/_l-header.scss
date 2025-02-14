@@ -1,7 +1,7 @@
 @use "../global/" as global;
 
 .l-header {
-  z-index: 100;
+  z-index: 1000;
   position: fixed;
   width: 100%;
   padding-top: 16px;
@@ -108,7 +108,7 @@
   background: #fff;
   transform: translateY(calc(-100% - 64px));
   transition: transform 0.4s linear;
-  z-index: 50;
+  z-index: 500;
 
   &.is-checked {
     transform: translateY(0);

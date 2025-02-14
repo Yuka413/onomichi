@@ -98,7 +98,7 @@ body {
 	padding-top: 16px;
 	position: fixed;
 	width: 100%;
-	z-index: 100;
+	z-index: 1000;
 }
 
 .l-header__container {
@@ -183,7 +183,7 @@ body {
 	transform: translateY(calc(-100% - 64px));
 	transition: transform 0.4s linear;
 	width: 100%;
-	z-index: 50;
+	z-index: 500;
 }
 
 .l-header__drawer.is-checked {
@@ -272,6 +272,87 @@ body {
 	font-weight: 500;
 	line-height: 1.25;
 	padding-bottom: 6px;
+}
+
+.c-benefit {
+	display: inline-block;
+	position: relative;
+	width: 160px;
+	z-index: 1;
+}
+
+.c-benefit:hover .c-benefit__image {
+	transform: scale(1.1);
+}
+
+.c-benefit__icon-text-ja {
+	color: #fff;
+	font-size: 7.68px;
+	font-weight: 700;
+	left: 50%;
+	line-height: 1.6;
+	position: absolute;
+	top: -18px;
+	transform: translateX(-50%);
+	z-index: 50;
+}
+
+.c-benefit__icon-text-number {
+	color: #fff;
+	font-family: "Josefin Sans", serif;
+	font-size: 23.04px;
+	font-weight: 700;
+	left: 50%;
+	line-height: 1;
+	position: absolute;
+	top: -5px;
+	transform: translateX(-50%);
+	z-index: 50;
+}
+
+.c-benefit__inner {
+	align-items: center;
+	background-color: #f5f5f5;
+	border-radius: 8px;
+	display: flex;
+	flex-direction: column;
+	gap: 9px;
+	overflow: hidden;
+	padding-bottom: 9px;
+	position: relative;
+}
+
+.c-benefit__zoom {
+	bottom: 0;
+	position: absolute;
+	right: 0;
+	z-index: 5;
+}
+
+.c-benefit__search {
+	bottom: 6px;
+	position: absolute;
+	right: 4px;
+	z-index: 10;
+}
+
+.c-benefit__icon {
+	left: 50%;
+	position: absolute;
+	top: -24px;
+	transform: translateX(-50%);
+	z-index: 10;
+}
+
+.c-benefit__image {
+	transition: transform 0.3s ease;
+}
+
+.c-benefit__bottom-text {
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 160%; /* 19.2px */
 }
 
 .p-mv {
@@ -423,7 +504,7 @@ body {
 }
 
 .p-campaign {
-	background-color: #E9F6F8;
+	background-color: #e9f6f8;
 	padding-bottom: 100px;
 	padding-top: 44px;
 	position: relative;
@@ -589,7 +670,7 @@ body {
 }
 
 .p-onomichi {
-	background-color: #E9F6F8;
+	background-color: #e9f6f8;
 	padding-top: 36px;
 }
 
@@ -641,7 +722,7 @@ body {
 }
 
 .p-enter {
-	background-color: #E9F6F8;
+	background-color: #e9f6f8;
 	overflow: hidden;
 	padding-bottom: 25px;
 	padding-top: 65px;

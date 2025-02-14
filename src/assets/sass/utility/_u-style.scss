@@ -8,6 +8,8 @@
 }
 
 .u-header__button {
+  margin-left: 4px;
+
   @include global.mq("md") {
     height: 36px;
     display: flex;
@@ -15,7 +17,6 @@
     padding: 6px 24px 8px 21px;
     font-size: 14px;
   }
-  margin-left: 4px;
 }
 
 .u-sp__hidden {
@@ -36,6 +37,6 @@
   text-underline-offset: 2px;
 }
 
-.u-bold{
+.u-bold {
   font-weight: 700;
 }

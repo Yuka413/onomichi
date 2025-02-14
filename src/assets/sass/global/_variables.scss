@@ -1,20 +1,20 @@
 // 色
-$main-color:#9ED0E0;
-$bg-color: #E9F6F8;
-$accent-color-red:  #CE2073;
-$accent-color-yellow: #FFEE56;
+$main-color: #9ed0e0;
+$bg-color: #e9f6f8;
+$accent-color-red: #ce2073;
+$accent-color-yellow: #ffee56;
 
 // フォント
 $ff-main: "Noto Sans JP", serif;
 $ff-title-ja: "Kiwi Maru", serif;
 $ff-title-en: "Courgette", serif;
+$ff-number: "Josefin Sans", serif;
 
 // ブレイクポイント
-$breakpoints :(
-    sm: "screen and (min-width: 600px)",
-    md: "screen and (min-width: 768px)",
-    lg: "screen and (min-width: 950px)",
-    xl: "screen and (min-width: 1230px)",
-    ll: "screen and (min-width: 1320px)",
-)
-
+$breakpoints: (
+  sm: "screen and (min-width: 600px)",
+  md: "screen and (min-width: 768px)",
+  lg: "screen and (min-width: 950px)",
+  xl: "screen and (min-width: 1230px)",
+  ll: "screen and (min-width: 1320px)",
+);
