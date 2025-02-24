@@ -48,12 +48,16 @@
 .p-onomichi__slider {
   position: relative;
   z-index: 15;
+  transform: translateY(2px);
   img {
     width: 100px;
     flex-shrink: 0;
     @include global.mq("md") {
       width: 200px;
     }
+  }
+  @include global.mq("md"){
+    transform: translateY(0px);
   }
 }
 

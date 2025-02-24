@@ -23,7 +23,7 @@
     object-fit: cover;
     object-position: center center;
 
-    @include global.mq("md"){
+    @include global.mq("md") {
       height: 740px;
     }
   }
@@ -68,6 +68,7 @@
 }
 
 .p-mv__text-main-first {
+  padding-inline: 5px;
   img {
     width: 335px;
 
@@ -110,6 +111,10 @@
   z-index: 40;
   picture {
     img {
+      @media screen and (max-width: 350px) {
+        min-width: calc(200px / 350px * 100vw);
+        height: auto;
+      }
       min-width: 200px;
       height: 408px;
       flex-shrink: 0;

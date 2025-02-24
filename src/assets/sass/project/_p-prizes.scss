@@ -1,0 +1,136 @@
+@use "../global/" as global;
+
+.p-prizes {
+  padding-top: 96px;
+  background-color: global.$bg-color;
+  @include global.mq("md") {
+    padding-top: 251px;
+  }
+}
+
+.p-prizes__inner {
+}
+
+.p-prizes__container {
+  border-radius: 24px;
+  padding-top: 59px;
+  padding-bottom: 35px;
+  background-color: #fff;
+  position: relative;
+
+  @include global.mq("md") {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding-top: 64px;
+    padding-inline: 20px;
+    padding-bottom: 53px;
+
+    &::after {
+      content: "";
+      background: url(../img/polygon_right.png) center center / contain
+        no-repeat;
+      position: absolute;
+      top: -122px;
+      right: 0;
+      width: 315px;
+      height: 86px;
+      flex-shrink: 0;
+    }
+
+    &::before {
+      content: "";
+      background: url(../img/polygon_left.png) center center / contain no-repeat;
+      top: -122px;
+      position: absolute;
+      left: 0;
+      width: 315px;
+      height: 86px;
+      flex-shrink: 0;
+    }
+  }
+
+  @include global.mq("xl") {
+    padding-inline: 54px;
+  }
+}
+
+.p-prizes__deco-sp {
+  position: absolute;
+  top: -83px;
+  left: 50%;
+  transform: translateX(-50%);
+  @include global.mq("md") {
+    display: none;
+  }
+}
+
+.p-prizes__deco-pc {
+  display: none;
+  position: absolute;
+  top: -149px;
+  left: 50%;
+  transform: translateX(-50%);
+  @include global.mq("md") {
+    display: block;
+  }
+}
+
+.p-prizes__title {
+  position: absolute;
+  top: -63px;
+  left: 50%;
+  transform: translateX(-50%);
+  @include global.mq("md") {
+    top: -122px;
+  }
+}
+
+.p-prizes_text {
+  text-align: center;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.6;
+  padding-inline: 20px;
+  @include global.mq("md") {
+    font-size: 16px;
+  }
+}
+
+.p-prizes__lists {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10px;
+  padding-top: 21px;
+  padding-bottom: 16px;
+  max-width: 600px;
+  margin: 0 auto;
+
+  @include global.mq("md") {
+    justify-content: center;
+    padding-bottom: 39px;
+    padding-top: 54px;
+    max-width: none;
+  }
+
+  @include global.mq("lg") {
+    justify-content: space-between;
+  }
+}
+
+.p-prizes__list-item {
+  &:nth-of-type(3),
+  &:nth-of-type(4) {
+    margin-top: 1px;
+    @include global.mq("md") {
+      margin-top: 39px;
+    }
+  }
+  &:nth-of-type(5) {
+    @include global.mq("md") {
+      margin-top: 39px;
+    }
+  }
+}

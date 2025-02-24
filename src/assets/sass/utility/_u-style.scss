@@ -40,3 +40,12 @@
 .u-bold {
   font-weight: 700;
 }
+
+.u-enter__line-shift{
+  @include global.mq("md"){
+    left: -80px;
+  }
+  @include global.mq("lg"){
+left: -97px;
+  }
+}
