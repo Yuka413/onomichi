@@ -1,13 +1,20 @@
 @use "../global/" as global;
 
+.c-benefit__container {
+  position: relative;
+}
+
+.c-benefit__container-icon {
+}
+
 .c-benefit {
-  margin-top: 24px;
   position: relative;
   z-index: 1;
   width: 100%;
   display: inline-block;
   border: 2px transparent solid;
-  border-radius: 10px;
+  border-radius: 12px;
+  margin-top: 18px;
   transition: border 0.5s ease;
   &:hover {
     border: 2px global.$main-color solid;
@@ -22,49 +29,52 @@
       }
     }
   }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -10px;
+    width: 50px;
+    height: 50px;
+    clip-path: inset(-10px -10px 0 0);
+  }
+  overflow: hidden;
+  @include global.mq("md") {
+    border-radius: 16px;
+  }
 }
 
 .c-benefit__big {
   @include global.mq("md") {
+    border-radius: 24px;
     .c-benefit__image {
       img {
         width: 355px;
         height: calc(355px * 340px / 440px);
       }
     }
-    .c-benefit__icon {
-      width: 96px;
-      top: -48px;
-    }
-
-    .c-benefit__icon-text-number {
-      top: -8px;
-      font-size: 48px;
-    }
     .c-benefit__bottom-text {
       font-size: 20px;
     }
-    .c-benefit__inner {
-      border-radius: 24px;
-    }
+
     .c-benefit__bottom {
-      padding-top: 29px;
-      padding-bottom: 29px;
+      padding-top: 28px;
+      padding-bottom: 28px;
       min-height: 120px;
     }
     .c-benefit__search {
-      width: 32px;
-      height: 32px;
-      right: 13px;
-      bottom: 15px;
+      bottom: 13px;
+      height: 35px;
+      right: 11px;
+      width: 35px;
     }
+
     .c-benefit__zoom {
-      width: 100px;
-      height: 100px;
-    }
-    .c-benefit__icon-text-ja {
-      font-size: 16px;
-      top: -37px;
+      width: 104px;
+      height: 104px;
+      bottom: -2px;
+      right: -2px;
     }
   }
 
@@ -85,7 +95,7 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: -18px;
+  top: 2px;
   color: #fff;
   z-index: 50;
   font-size: 7.68px;
@@ -94,7 +104,7 @@
 
   @include global.mq("md") {
     font-size: 12.8px;
-    top: -27px;
+    top: -9px;
   }
 }
 
@@ -102,7 +112,7 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: -4px;
+  top: 16px;
   color: #fff;
   z-index: 50;
   font-size: 23.04px;
@@ -111,21 +121,16 @@
   font-family: global.$ff-number;
   @include global.mq("md") {
     font-size: 38.4px;
-    top: -4px;
+    top: 13px;
   }
 }
 
 .c-benefit__inner {
   display: flex;
   flex-direction: column;
-  border-radius: 10px;
-  overflow: hidden;
   align-items: center;
   position: relative;
   background-color: #f5f5f5;
-  @include global.mq("md") {
-    border-radius: 16px;
-  }
 }
 
 .c-benefit__zoom {
@@ -162,15 +167,32 @@
 
 .c-benefit__icon {
   position: absolute;
-  top: -23px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
   width: 47px;
+  top: -4px;
 
   @include global.mq("md") {
-    width: 80px;
-    top: -37px;
+    width: 78px;
+    top: -20px;
+  }
+}
+
+.c-benefit__icon-big {
+  @include global.mq("md") {
+    .c-benefit__icon {
+      width: 96px;
+      top: -28px;
+    }
+    .c-benefit__icon-text-number {
+      font-size: 47px;
+      top: 11px;
+    }
+    .c-benefit__icon-text-ja {
+      font-size: 16px;
+      top: -17px;
+    }
   }
 }
 
