@@ -24,6 +24,7 @@ const swiper = new Swiper(".p-onomichi__swiper", {
   breakpoints: {
     768: {
       spaceBetween: 20,
+
     },
   },
 
@@ -41,5 +42,29 @@ const swiper = new Swiper(".p-onomichi__swiper", {
   // And if we need scrollbar
   scrollbar: {
     el: ".swiper-scrollbar",
+  },
+});
+
+const spotSwiper = new Swiper(".p-spots__swiper", {
+  // Optional parameters
+  loop: true,
+  spaceBetween: 16,
+  centeredSlides: true,
+  slidesPerView: "auto",
+  allowTouchMove: true,
+
+
+  breakpoints: {
+    768: {
+      spaceBetween: 32,
+      slidesPerView: "auto",
+
+    },
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
   },
 });

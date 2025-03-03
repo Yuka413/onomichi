@@ -1,0 +1,136 @@
+@use "../global/" as global;
+
+.p-spots {
+  position: relative;
+  padding-bottom: 24px;
+  background-color: #67b0c7;
+  @include global.mq("md"){
+    overflow-x: hidden;
+  }
+}
+
+.p-spots__container {
+  position: relative;
+  @include global.mq("md") {
+    padding-bottom: 24px;
+    flex-direction: row;
+    display: flex;
+    max-width: 1190px;
+    margin: 0 auto;
+  }
+}
+
+.p-spots__top {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  @include global.mq("md") {
+    flex-direction: column;
+    padding-left: 20px;
+    padding-right: 48px;
+  }
+}
+
+.p-spots__top-star {
+  width: 29px;
+  height: 29px;
+  @include global.mq("md"){
+    width: 56px;
+    height: 56px;
+  }
+}
+
+.p-spots__top-title {
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  color: #fff;
+  font-family: global.$ff-title-ja;
+  @include global.mq("md") {
+    writing-mode: vertical-rl;
+    font-size: 40px;
+  }
+}
+
+.p-spots__swiper {
+  padding-top: 24px;
+  .swiper-slide {
+    width: fit-content;
+  }
+  @include global.mq("md") {
+    padding-top: 0;
+    overflow: visible;
+  }
+}
+
+.p-spots__swiper-prev {
+  &::after {
+    display: none;
+  }
+}
+
+.p-spots__swiper-next {
+  &::after {
+    display: none;
+  }
+}
+
+.p-spots__bottom {
+  text-align: center;
+  @include global.mq("md") {
+    display: flex;
+    justify-content: center;
+    gap: 81px;
+  }
+}
+
+.p-spots__bottom-spots {
+  img {
+    width: 254.439px;
+    height: 55px;
+    flex-shrink: 0;
+    @include global.mq("md") {
+      width: 495px;
+      height: 107px;
+    }
+  }
+}
+
+.p-spots__bottom-right {
+  @include global.mq("md") {
+  }
+}
+
+.p-spots__bottom-text {
+  padding-top: 16px;
+  padding-bottom: 24px;
+  color: #fff;
+  font-size: 11.444px;
+  font-weight: 400;
+  line-height: 1.6;
+  @include global.mq("md") {
+    font-size: 16px;
+  }
+}
+
+.p-spots__left-button,
+.p-spots__right-button {
+  display: none;
+  @include global.mq("md") {
+    img {
+      width: 80px;
+      height: 80px;
+    }
+    position: absolute;
+    bottom: 0;
+    z-index: 30;
+  }
+}
+
+.p-spots__left-button {
+  left: 290px;
+}
+.p-spots__right-button {
+  right: 40%;
+}

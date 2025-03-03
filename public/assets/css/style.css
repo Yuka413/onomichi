@@ -401,6 +401,56 @@ body {
 	line-height: 1.6;
 }
 
+.c-spots {
+	background-color: #fff;
+	border-radius: 12px;
+	overflow: hidden;
+	width: 240px;
+}
+
+.c-spots__image img {
+	height: 180px;
+	width: 100%;
+}
+
+.c-spots__body {
+	min-height: 220px;
+	padding-inline: 24px;
+}
+
+.c-spots__body-title {
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 1.6;
+	padding-top: 16px;
+	text-align: center;
+}
+
+.c-spots__body-text {
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 1.6;
+	padding-top: 16px;
+	text-align: left;
+}
+
+.c-wave {
+	background-image: url(../img/img_bg_wave.png);
+	background-position: center center;
+	background-repeat: repeat-x;
+	background-size: 96px;
+	bottom: 0;
+	height: 46px;
+	position: absolute;
+	width: 100%;
+}
+
+.c-wave__reverse {
+	bottom: initial;
+	top: 0;
+	transform: rotate(180deg);
+}
+
 .p-mv {
 	background: var(--LP-Light-Blue, #e9f6f8);
 	padding-bottom: 145px;
@@ -933,6 +983,7 @@ body {
 	padding-bottom: 35px;
 	padding-top: 59px;
 	position: relative;
+	z-index: 5;
 }
 
 .p-prizes__deco-sp {
@@ -976,6 +1027,101 @@ body {
 	max-width: 600px;
 	padding-bottom: 9px;
 	padding-top: 28px;
+}
+
+.p-bg1 {
+	background-image: url(../img/bg1.png);
+	background-position: top center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 260px;
+	margin-top: -44px;
+	position: relative;
+	width: 100%;
+}
+
+.p-spots {
+	background-color: #67b0c7;
+	padding-bottom: 24px;
+	position: relative;
+}
+
+.p-spots__container {
+	position: relative;
+}
+
+.p-spots__top {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+}
+
+.p-spots__top-star {
+	height: 29px;
+	width: 29px;
+}
+
+.p-spots__top-title {
+	color: #fff;
+	font-family: "Kiwi Maru", serif;
+	font-size: 28px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 1.25;
+}
+
+.p-spots__swiper {
+	padding-top: 24px;
+}
+
+.p-spots__swiper .swiper-slide {
+	width: -moz-fit-content;
+	width: fit-content;
+}
+
+.p-spots__swiper-prev::after {
+	display: none;
+}
+
+.p-spots__swiper-next::after {
+	display: none;
+}
+
+.p-spots__bottom {
+	text-align: center;
+}
+
+.p-spots__bottom-spots img {
+	flex-shrink: 0;
+	height: 55px;
+	width: 254.439px;
+}
+
+.p-spots__bottom-text {
+	color: #fff;
+	font-size: 11.444px;
+	font-weight: 400;
+	line-height: 1.6;
+	padding-bottom: 24px;
+	padding-top: 16px;
+}
+
+.p-spots__left-button,
+.p-spots__right-button {
+	display: none;
+}
+
+.p-spots__left-button {
+	left: 290px;
+}
+
+.p-spots__right-button {
+	right: 40%;
+}
+
+.p-qa {
+	padding-top: 80px;
+	position: relative;
 }
 
 .u-inner {
@@ -1145,6 +1291,35 @@ body {
 
 .c-benefit__bottom-text {
 	font-size: 16px;
+}
+
+.c-spots {
+	border-radius: 24px;
+	width: 344px;
+}
+
+.c-spots__image img {
+	height: 240px;
+}
+
+.c-spots__body {
+	min-height: 300px;
+	padding-inline: 32px;
+}
+
+.c-spots__body-title {
+	font-size: 20px;
+	padding-top: 24px;
+}
+
+.c-spots__body-text {
+	font-size: 16px;
+	padding-top: 24px;
+}
+
+.c-wave {
+	background-size: 252px;
+	height: 120px;
 }
 
 .p-mv__bg img {
@@ -1575,6 +1750,67 @@ body {
 	margin-top: 41px;
 }
 
+.p-spots {
+	overflow-x: hidden;
+}
+
+.p-spots__container {
+	display: flex;
+	flex-direction: row;
+	margin: 0 auto;
+	max-width: 1190px;
+	padding-bottom: 24px;
+}
+
+.p-spots__top {
+	flex-direction: column;
+	padding-left: 20px;
+	padding-right: 48px;
+}
+
+.p-spots__top-star {
+	height: 56px;
+	width: 56px;
+}
+
+.p-spots__top-title {
+	font-size: 40px;
+	writing-mode: vertical-rl;
+}
+
+.p-spots__swiper {
+	overflow: visible;
+	padding-top: 0;
+}
+
+.p-spots__bottom {
+	display: flex;
+	gap: 81px;
+	justify-content: center;
+}
+
+.p-spots__bottom-spots img {
+	height: 107px;
+	width: 495px;
+}
+
+.p-spots__bottom-text {
+	font-size: 16px;
+}
+
+.p-spots__left-button,
+.p-spots__right-button {
+	bottom: 0;
+	position: absolute;
+	z-index: 30;
+}
+
+.p-spots__left-button img,
+.p-spots__right-button img {
+	height: 80px;
+	width: 80px;
+}
+
 .u-inner {
 	padding-inline: 24px;
 }
@@ -1653,6 +1889,10 @@ body {
 
 .p-prizes__lists {
 	justify-content: space-between;
+}
+
+.p-bg1 {
+	height: 640px;
 }
 
 .u-enter__line-shift {
