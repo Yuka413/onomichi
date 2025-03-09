@@ -1,6 +1,149 @@
 @use "../global/" as global;
 
-.p-qa{
-    position: relative;
-    padding-top: 80px;
+.p-qa {
+  position: relative;
+  padding-top: 80px;
+  background-color: global.$bg-color;
+  padding-bottom: 20px;
+}
+
+.p-qa__inner {
+  padding-inline: 20px;
+}
+
+.p-qa__boxes {
+  padding-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.p-qa__box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  border: 2px solid var(--LP-Blown, #4a3636);
+  background: var(--LP-White, #fff);
+  overflow: hidden;
+
+  &.is-open {
+    .p-qa__q-drawer-bar {
+      &:nth-of-type(2) {
+        opacity: 1;
+        transform: rotate(0deg);
+      }
+    }
+  }
+}
+
+.p-qa__q {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  background-color: #fff;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-inline: 16px;
+  width: 100%;
+  position: relative;
+  justify-content: space-between;
+}
+
+.p-qa__q-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.p-qa__q-container {
+}
+
+.p-qa__q-icon {
+  color: global.$main-color;
+  font-family: global.$ff-number;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.25;
+  margin-bottom: -6px;
+  @include global.mq("md") {
+    font-size: 32px;
+  }
+}
+
+.p-qa__q-text {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.6;
+  padding-left: 16px;
+  text-align: left;
+  @include global.mq("md") {
+    font-size: 20px;
+  }
+}
+
+.p-qa__q-drawer {
+  width: 26.182px;
+  height: 26.182px;
+  flex-shrink: 0;
+  background-color: global.$main-color;
+  border-radius: 50%;
+  position: relative;
+}
+
+.p-qa__q-drawer-bar {
+  width: 10px;
+  height: 1.5px;
+  flex-shrink: 0;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 13px;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+
+  &:nth-of-type(2) {
+    opacity: 1;
+    transform: rotate(90deg);
+    left: 8px;
+    top: 12.5px;
+  }
+}
+
+.p-qa__a {
+  background: var(--LP-Gray, #f5f5f5);
+  padding: 16px 16px 16px 16px;
+  width: 100%;
+  display: none;
+}
+
+.p-qa__a-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  gap: 16px;
+}
+
+.p-qa__a-icon {
+  font-family: global.$ff-number;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.25;
+  color: global.$main-color;
+  @include global.mq("md") {
+    font-size: 32px;
+  }
+}
+
+.p-qa__a-text {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.6;
+  @include global.mq("md") {
+    font-size: 16px;
+  }
 }

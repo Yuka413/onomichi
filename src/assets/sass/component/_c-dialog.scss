@@ -1,0 +1,68 @@
+@use "../global/" as global;
+
+.c-dialog {
+  border: none;
+  padding: 0;
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  background-color: initial;
+  &::backdrop {
+    opacity: 0.5;
+    background: #000;
+  }
+}
+
+.c-dialog__container {
+  width: 300px;
+  border-radius: 24px;
+  overflow: hidden;
+  padding-bottom: 106px;
+  background-color: #fff;
+  @include global.mq("md") {
+    width: 480px;
+  }
+}
+
+.c-dialog__image {
+}
+
+.c-dialog__bottom {
+  text-align: center;
+  padding-inline: 40px;
+}
+
+.c-dialog__bottom-title {
+  font-size: 18px;
+  padding-top: 32px;
+  font-weight: 700;
+  line-height: 1.6;
+  span{
+    display: inline-block;
+    font-weight: 700;
+  }
+  @include global.mq("md") {
+    font-size: 20px;
+  }
+}
+
+.c-dialog__bottom-text {
+  padding-top: 12px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+  padding-bottom: 24px;
+}
+
+.c-dialog__button {
+  display: flex;
+  justify-content: center;
+}
+
+.c-dialog__close {
+  border-radius: 40px;
+  border: 2px solid var(--LP-Blown, #4a3636);
+  background: var(--LP-White, #fff);
+  box-shadow: 0px 4px 0px 0px #4a3636;
+  padding: 6px 24px 8px 24px;
+}
