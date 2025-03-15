@@ -1,0 +1,17 @@
+@use "../global/" as global;
+
+.l-footer {
+    background-color: var(--LP-Dark-Blue, #67b0c7);
+padding-bottom: 24px;
+}
+
+.l-footer__inner {
+  text-align: center;
+}
+
+.l-footer__copyright {
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #fff;
+}

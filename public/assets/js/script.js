@@ -112,3 +112,41 @@ $(".js-accordion").on("click", function (e) {
     $(this).next().slideDown();
   }
 });
+
+// フォームバリデーションエラー =====================
+const form = document.getElementById("js-contact-form");
+
+form.addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  if (form.checkValidity()) {
+    alert("送信に成功しました！");
+  }
+});
+
+// 2通りめの追加記述 ここから ==================
+const formInputs = form.querySelectorAll(".js-input");
+
+formInputs.forEach((formInput) => {
+  formInput.addEventListener("invalid", function () {
+    this.classList.add("is-error");
+  });
+  formInput.addEventListener("input", function () {
+    this.classList.remove("is-error");
+  });
+});
+// ２通り目の追加記述 ここまで ==================
+
+// page-top
+const pageTop = document.querySelector(".c-pagetop");
+pageTop.addEventListener("click", function () {
+  window.scroll({ top: 0, behavior: "smooth" });
+});
+
+jQuery(window).on("scroll", function () {
+  if (100 < jQuery(window).scrollTop()) {
+    jQuery(".c-pagetop").addClass("is-show");
+  } else {
+    jQuery(".c-pagetop").removeClass("is-show");
+  }
+});

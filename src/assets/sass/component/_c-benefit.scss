@@ -12,12 +12,12 @@
   z-index: 1;
   width: 100%;
   display: inline-block;
-  border: 2px transparent solid;
+  border: 4px transparent solid;
   border-radius: 12px;
   margin-top: 18px;
   transition: border 0.5s ease;
   &:hover {
-    border: 2px global.$main-color solid;
+    border: 4px global.$main-color solid;
     .c-benefit__image {
       img {
         transform: scale(1.2);

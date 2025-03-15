@@ -1,0 +1,125 @@
+@use "../global/" as global;
+
+.p-follow {
+  padding-top: 40px;
+  padding-bottom: 70px;
+  background-color: global.$bg-color;
+  position: relative;
+
+  @include global.mq("md"){
+    padding-bottom: 200px;
+  }
+}
+
+.p-follow__inner {
+  padding-inline: 20px;
+}
+
+.p-follow__top-text {
+  font-family: global.$ff-number;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.25;
+  text-align: center;
+}
+
+.p-follow__icons {
+  padding-top: 24px;
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+.p-follow-icon {
+}
+
+.p-follow__onomichi {
+  padding-top: 15px;
+  transform: translateY(7px);
+  text-align: center;
+  svg {
+    max-width: 755px;
+  }
+}
+
+.p-follow__map {
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  @include global.mq("md") {
+    flex-direction: row-reverse;
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+}
+
+.p-follow__map-ifame {
+  height: 271px;
+  object-position: center;
+  width: 100%;
+  @include global.mq("md") {
+    flex: 1;
+  }
+}
+
+.p-follow__map-bottom {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  background-color: #fff;
+  @include global.mq("md") {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.p-follow__map-title {
+  text-align: center;
+  img {
+    width: 153px;
+    height: 20px;
+  }
+}
+
+.p-follow__map-lists {
+  margin: 0 auto;
+  max-width: 280px;
+}
+
+.p-follow__map-list {
+  padding-top: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.p-follow__map-list-title {
+  width: 80px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.6;
+  padding-left: 16px;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: global.$main-color;
+  }
+}
+
+.p-follow__map-list-info {
+  flex-grow: 1;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.6;
+}

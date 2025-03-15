@@ -136,9 +136,9 @@
     display: block;
     position: absolute;
     top: 10px;
-    left: -20px;
+    right: calc(50% + 300px);
     img {
-      width: 250px;
+      min-width: 250px;
       height: 250px;
       flex-shrink: 0;
     }
@@ -227,7 +227,7 @@
   line-height: 1.6;
   &:nth-of-type(4) {
     margin-top: -1px;
-    @include global.mq("md"){
+    @include global.mq("md") {
       margin-top: 0px;
     }
   }

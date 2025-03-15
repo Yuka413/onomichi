@@ -1,0 +1,22 @@
+@use "../global/" as global;
+
+.c-pagetop {
+  padding-top: 24px;
+  text-align: center;
+  z-index: 50;
+  img {
+    width: 75px;
+    height: 78px;
+  }
+
+  @include global.mq("md") {
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    &.is-show {
+      opacity: 1;
+    }
+  }
+}
